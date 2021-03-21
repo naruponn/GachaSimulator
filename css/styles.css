@@ -1,0 +1,39 @@
+body {
+  font-size: 20px;
+  text-align: center;
+}
+
+div {
+  height: 30px;
+}
+
+ul {
+  list-style: none;
+  width: 70%;
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+li.four{
+  color: red;
+  font-size: 24px;
+}
+
+li.three{
+  color: blue;
+  font-size: 20px;
+}
+
+li.two{
+  font-size: 16px;
+}
+
+#btn {
+  user-select: none;
+  cursor: pointer;
+  background: #eee;
+  width: 250px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
