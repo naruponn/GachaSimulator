@@ -1,6 +1,8 @@
 'use strict';
 
 {
+  let a = 0;
+  let b = 0;
   document.body.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
       const ul = document.querySelector('ul');
@@ -17,10 +19,19 @@
 
   function gacha() {
     const rResult = [];
+    // const q1 = document.getElementsByName('q1');
+    // console.log(q1.checked);
+    let form = document.forms[0];
+    //ラジオボタン取得
+    let radio = form.radio;
+    let pro = radio.value;
+    b += 10;
+
+    // console.log(pro);
   
     for (let i = 0; i < 10; i++) {
       let r = Math.random();
-      if (r < 0.05) {
+      if (r < pro) {
         rResult.push('★4');
       } else if (r < 0.3){
         rResult.push('★3');
@@ -49,6 +60,7 @@
       switch (rResult[i]) {
         case '★4':
           li.classList.add('four');
+          a++;
           break;
         case '★3':
           li.classList.add('three');
@@ -58,5 +70,7 @@
           break;
       }
     }
+    const count = document.getElementById('count');
+    count.textContent = `★4:${a}枚 / ${b}連`;
   }
 }

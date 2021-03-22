@@ -37,3 +37,7 @@ li.two{
   margin-bottom: 20px;
   border-radius: 10px;
 }
+
+form {
+  font-size: 14px;
+}
